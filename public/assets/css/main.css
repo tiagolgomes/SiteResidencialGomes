@@ -1868,32 +1868,11 @@ fieldset[disabled] .btn-line.btn-metis-6.active {
   width: 90px;
   position: relative;
 }
-.quick-btn-red {
-  background: #EEEEEE;
-  box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC;
+.red {
   color: #e84b45;
-  display: inline-block;
-  height: 80px;
-  margin: 10px;
-  padding-top: 16px;
-  text-align: center;
-  text-decoration: none;
-  text-
-  width: 90px;
-  position: relative;
 }
-.quick-btn-green {
-  background: #EEEEEE;
-  box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC;
+.green {
   color: #81e287;
-  display: inline-block;
-  height: 80px;
-  margin: 10px;
-  padding-top: 16px;
-  text-align: center;
-  text-decoration: none;
-  width: 90px;
-  position: relative;
 }
 .quick-btn span {
   display: block;
