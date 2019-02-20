@@ -1868,11 +1868,14 @@ fieldset[disabled] .btn-line.btn-metis-6.active {
   width: 90px;
   position: relative;
 }
-.red {
+.txtred {
   color: #e84b45;
 }
-.green {
+.txtgreen {
   color: #81e287;
+}
+.txtyellow {
+  color: #faff00;
 }
 .quick-btn span {
   display: block;
