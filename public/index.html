@@ -66,7 +66,7 @@
                     </header>
                     <div class="topnav">
                         <div class="btn-group">
-                            <a href="#" data-toggle="tooltip" data-original-title="Logout"
+                            <a href="login.html" data-toggle="tooltip" data-original-title="Logout"
                                 data-placement="bottom" class="btn btn-metis-1 btn-sm" id="logout">
                                 <i class="fa fa-power-off"></i>
                             </a>
@@ -183,7 +183,7 @@
                 </li>
                 <li class="nav-divider"></li>
                 <li>
-                    <a href="#">
+                    <a href="login.html">
                         <i class="fa fa-sign-in"></i>
                         <span class="link-title" id="logout">Logout</span>
                     </a>
@@ -464,11 +464,7 @@
                 });
 
                 $('#logout').click(function(){
-                    //$(this).fadeOut();
-	                //$(location).attr('href', 'login.html');
-                    alert( "Logout realizado com Sucesso!" );
-                    window.location.href = "login.html";
-                    
+                    $(this).fadeIn();
                 });
             });
         })(jQuery);
