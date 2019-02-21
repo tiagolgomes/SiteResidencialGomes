@@ -464,8 +464,9 @@
                 });
 
                 $('#logout').click(function(){
-                    $(this).fadeOut();
-	                $(location).attr('href', 'login.html');
+                    //$(this).fadeOut();
+	                //$(location).attr('href', 'login.html');
+                    window.location.href = "login.html";
                 });
             });
         })(jQuery);
