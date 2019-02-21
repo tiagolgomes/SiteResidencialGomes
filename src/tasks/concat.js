@@ -5,7 +5,6 @@ module.exports = {
         'src/assets/js/ie10-viewport-bug-workaround.js',
         'src/assets/js/core/Metis.js',
         'src/assets/js/core/metisNavBar.js',
-        'src/assets/js/core/fullscreen.js',
         'src/assets/js/core/metisAnimatePanel.js',
         'src/assets/js/core/init.js'
       ],

@@ -117,7 +117,6 @@ gulp.task('scripts:core', () => {
             // 'src/assets/js/ie10-viewport-bug-workaround.js',
             'src/js/core/Metis.js',
             'src/js/core/metisNavBar.js',
-            'src/js/core/fullscreen.js',
             'src/js/core/metisAnimatePanel.js',
             'src/js/core/init.js'
         ])

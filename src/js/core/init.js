@@ -5,10 +5,6 @@
  
     $('#menu').metisMenu();
     Metis.navBar();
-    Metis.metisAnimatePanel();
-    Metis.toggleFullScreen();
-    Metis.boxFullScreen();
-    Metis.panelBodyCollapse();
-    Metis.boxHiding();   
+    Metis.metisAnimatePanel(); 
   });
 })(jQuery);
