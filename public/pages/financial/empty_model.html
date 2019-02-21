@@ -134,19 +134,19 @@
                     </a>
                     <ul class="collapse">
                         <li>
-                            <a href="pages/financial/incoming.html">
+                            <a href="index.html">
                                 <i class="fa fa-dollar"></i>&nbsp; Recebimento </a>
                         </li>
                         <li>
-                            <a href="pages/financial/outgoing.html">
+                            <a href="#">
                                 <i class="fa fa-dollar"></i>&nbsp; Despesas </a>
                         </li>
                         <li>
-                            <a href="pages/financial/proof_of_payment.html">
-                                <i class="fa fa-file-text"></i>&nbsp; Comprovante de Pagamento</a>
+                            <a href="#">
+                                <i class="fa fa-file-text"></i>&nbsp; Recibo </a>
                         </li>
                         <li>
-                            <a href="pages/financial/balance.html">
+                            <a href="#">
                                 <i class="fa fa-dollar"></i>&nbsp; Balanço </a>
                         </li>
                     </ul>
@@ -159,33 +159,33 @@
                     </a>
                     <ul class="collapse">
                         <li>
-                            <a href="pages/place_management/new_inhabitant.html">
+                            <a href="#">
                                 <i class="fa fa-plus"></i>&nbsp; Novo Morador </a>
                         </li>
                         <li>
-                            <a href="pages/place_management/new_place.html">
+                            <a href="#">
                                 <i class="fa fa-plus"></i>&nbsp; Novo Imóvel </a>
                         </li>
                         <li>
-                            <a href="pages/place_management/contract.html">
+                            <a href="#">
                                 <i class="fa fa-file-text"></i>&nbsp; Contrato </a>
                         </li>
                         <li>
-                            <a href="pages/place_management/declaration_of_residence.html">
-                                <i class="fa fa-file-text"></i>&nbsp; Declaração de Residência</a>
+                            <a href="#">
+                                <i class="fa fa-file-text"></i>&nbsp; Declaração </a>
                         </li>
                         <li>
-                            <a href="pages/place_management/rules_of_procedure.html">
-                                <i class="fa fa-file-text"></i>&nbsp; Regulamento Interno</a>
+                            <a href="#">
+                                <i class="fa fa-file-text"></i>&nbsp; Regulamento </a>
                         </li>
 
                     </ul>
                 </li>
                 <li class="nav-divider"></li>
                 <li>
-                    <a href="#">
+                    <a href="login.html">
                         <i class="fa fa-sign-in"></i>
-                        <span class="link-title" id="logout">Logout</span>
+                        <span class="link-title">Logout</span>
                     </a>
                 </li>
             </ul>
@@ -461,11 +461,6 @@
                     setTimeout(function() {
                         $(activeForm).removeClass('animated fadeIn');
                     }, 1000);
-                });
-
-                $('#logout').click(function(){
-                    $(this).fadeOut();
-	                //$(location).attr('href', 'https://www.w3schools.com/jquery/event_click.asp');
                 });
             });
         })(jQuery);
