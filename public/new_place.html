@@ -90,49 +90,6 @@
                 */
             });
         });
-        (function($) {
-            $(document).ready(function() {
-
-                $("#teste").hide();
-
-                var mysql = require('mysql');
-
-                var con = mysql.createConnection({
-                host: "127.0.0.1",
-                user: "root",
-                password: "tlg18MAR",
-                database: "mydb"
-                });
-
-                $(".list-inline li > a").click(function() {
-                    var activeForm = $(this).attr('href') + ' > form';
-                    //console.log(activeForm);
-                    $(activeForm).addClass('animated fadeIn');
-                    //set timer to 1 seconds, after that, unload the animate animation
-                    setTimeout(function() {
-                        $(activeForm).removeClass('animated fadeIn');
-                    }, 1000);
-                });
-
-                $("#logout").click(function(){
-                    $(this).fadeIn();
-                });
-
-                $("#btn_cadastrarEstabelecimento").click(function(){
-                    /*
-                    con.connect(function(err) {
-                        if (err) throw err;
-                        var sql = "INSERT INTO SITE_ALUGUEL_IMOVEL (DESCRICAO, ENDERECO, NUMERO, CEP) VALUES ('Fundo 01', 'Rua Bom Jesus de Iguape', '6078', '81.730-020')";
-                        con.query(sql, function (err, result) {
-                            if (err) throw err;
-                            
-                            
-                        });
-                    });
-                    */
-                });
-            });
-        })(jQuery);
     </script>
 </head>
 
