@@ -77,7 +77,11 @@
             });
 
             $("#btn_cadastrarEstabelecimento").click(function(){
+                $("#placeSuccessfulRegistration").modal("show");
                 /*
+
+                data-toggle="modal"
+
                 con.connect(function(err) {
                     if (err) throw err;
                     var sql = "INSERT INTO SITE_ALUGUEL_IMOVEL (DESCRICAO, ENDERECO, NUMERO, CEP) VALUES ('Fundo 01', 'Rua Bom Jesus de Iguape', '6078', '81.730-020')";
@@ -276,7 +280,7 @@
                                         </div>
                                         <div class="form-actions" >
                                             <div class="topnav">
-                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
+                                                <input type="button" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
                                                 <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
                                         </div>
