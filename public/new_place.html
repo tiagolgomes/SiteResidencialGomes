@@ -76,9 +76,11 @@
                 $(this).fadeIn();
             });
 
+            /*
+
             $('#btn_cadastrarEstabelecimento').click(function(){
                 $('#teste').hide();
-                /*
+                
 
                 con.connect(function(err) {
                     if (err) throw err;
@@ -89,7 +91,12 @@
                         
                     });
                 });
-                */
+            });
+
+            */
+
+            $("#btn_cadastrarEstabelecimento").click(function(){
+  	            $("#cad").hide();
             });
         });
     </script>
@@ -285,16 +292,14 @@
                                             <div class="col-lg-3"></div>
                                         </div>
                                         <div class="form-actions" >
-                                            <div class="col-lg-6"></div>
+                                            <div class="col-lg-8"></div>
                                             <div class="topnav">
                                                 <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
                                                 <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
                                         </div>
-                                        <div id="teste">
-                                            <h6>
-                                                teste
-                                            </h6>
+                                        <div id="cad">
+                                            Olá
                                         </div>
                                     </form>
                                 </div>
