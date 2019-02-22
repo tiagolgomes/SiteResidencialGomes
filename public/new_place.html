@@ -283,9 +283,15 @@
                                         </div>
                                         <div class="form-actions" >
                                             <div class="topnav">
-                                                <input type="submit" id="cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
+                                                <input data-toggle="modal" href="#helpModal" type="submit" id="cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
                                                 <input type="submit" id="cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
+                                        </div>
+
+                                        <div id="" class="btn btn-sucess btn-lg">
+                                            <p>
+                                                Imóvel Cadastrado com Sucesso!
+                                            </p>
                                         </div>
                                     </form>
                                 </div>
@@ -306,9 +312,12 @@
     </footer>
     <!-- /#footer -->
 
-    <a data-toggle="modal" data-original-title="Help" data-placement="bottom"
-        class="btn btn-default btn-sm"
+    <a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-default btn-sm"
         href="#helpModal">
+        <i class="fa fa-question"></i>
+    </a>
+
+    <a data-toggle="modal" href="#helpModal">
         <i class="fa fa-question"></i>
     </a>
 
