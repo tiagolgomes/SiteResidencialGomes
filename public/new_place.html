@@ -89,13 +89,6 @@
                 });
                 */
             });
-
-            $("#btn_cancelar").click(function(){
-                $("#descricao").val("");
-                $("#endereco").val("");
-                $("#numero").val("");
-                $("#cep").val("");
-            });
         });
         (function($) {
             $(document).ready(function() {
@@ -137,13 +130,6 @@
                         });
                     });
                     */
-                });
-
-                $("#btn_cancelar").click(function(){
-                    $("#descricao").val("");
-                    $("#endereco").val("");
-                    $("#numero").val("");
-                    $("#cep").val("");
                 });
             });
         })(jQuery);
@@ -334,7 +320,7 @@
                                         <div class="form-actions" >
                                             <div class="topnav">
                                                 <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
-                                                <input type="button" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
+                                                <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
                                         </div>
                                     </form>
