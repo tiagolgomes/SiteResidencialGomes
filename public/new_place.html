@@ -260,6 +260,16 @@
     <script type="text/javascript">
         (function($) {
             $(document).ready(function() {
+
+                var mysql = require('mysql');
+
+                var con = mysql.createConnection({
+                host: "127.0.0.1",
+                user: "root",
+                password: "tlg18MAR",
+                database: "mydb"
+                });
+
                 $('.list-inline li > a').click(function() {
                     var activeForm = $(this).attr('href') + ' > form';
                     //console.log(activeForm);
@@ -272,6 +282,17 @@
 
                 $('#logout').click(function(){
                     $(this).fadeIn();
+                });
+
+                $('#').click(function(){
+                    con.connect(function(err) {
+                        if (err) throw err;
+                        var sql = "INSERT INTO SITE_ALUGUEL_IMOVEL (DESCRICAO, ENDERECO, NUMERO, CEP) VALUES ('Fundo 01', 'Rua Bom Jesus de Iguape', '6078', '81.730-020')";
+                        con.query(sql, function (err, result) {
+                            if (err) throw err;
+                            
+                        });
+                    });
                 });
             });
         })(jQuery);
