@@ -200,23 +200,7 @@
                         <div class="col-lg-12">
                             <div class="box">
                                 <header>
-                                    <div class="icons"><i class="fa fa-ellipsis-h"></i></div>
                                     <h5>Cadastro de Novo Imóvel</h5>
-                                    <!-- .toolbar -->
-                                    <div class="toolbar">
-                                    <nav style="padding: 8px;">
-                                        <a href="javascript:;" class="btn btn-default btn-xs collapse-box">
-                                            <i class="fa fa-minus"></i>
-                                        </a>
-                                        <a href="javascript:;" class="btn btn-default btn-xs full-box">
-                                            <i class="fa fa-expand"></i>
-                                        </a>
-                                        <a href="javascript:;" class="btn btn-danger btn-xs close-box">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </nav>
-                                    </div>            
-                                    <!-- /.toolbar -->
                                 </header>
                                 <div id="collapse3" class="body">
                                     <form action="#" class="form-horizontal" id="inline-validate">
@@ -297,8 +281,11 @@
                                                 <input type="text" id="maxNum" name="maxNum" class="form-control col-lg-6">
                                             </div>
                                         </div>
-                                        <div class="form-actions">
-                                            <input type="submit" value="Validate" class="btn btn-primary">
+                                        <div class="form-actions" >
+                                            <div class="topnav">
+                                                <input type="submit" id="cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
+                                                <input type="submit" id="cancelar" value="Cancelar" class="btn btn-default">
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -399,13 +386,13 @@
                     $(this).fadeIn();
                 });
 
-                $('#').click(function(){
+                $('#cadastrarEstabelecimento').click(function(){
                     con.connect(function(err) {
                         if (err) throw err;
                         var sql = "INSERT INTO SITE_ALUGUEL_IMOVEL (DESCRICAO, ENDERECO, NUMERO, CEP) VALUES ('Fundo 01', 'Rua Bom Jesus de Iguape', '6078', '81.730-020')";
                         con.query(sql, function (err, result) {
                             if (err) throw err;
-                            $("#placeSuccessfulRegistration").show();
+                            $('#placeSuccessfulRegistration').show();
                         });
                     });
                 });
