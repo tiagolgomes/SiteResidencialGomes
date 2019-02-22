@@ -55,6 +55,49 @@
         $(function () {
             //$("#teste").hide();
 
+            $("#btn_cadastrarEstabelecimento").hide();
+            
+            $("#reqDescricao").hide();
+            $("#reqEndereco").hide();
+            $("#reqNumero").hide();
+            $("#reqCEP").hide();
+
+            $('#btn_validarEstabelecimento').click(function(){
+                
+                $("#btn_cadastrarEstabelecimento").hide();
+                $("#reqDescricao").hide();
+                $("#reqEndereco").hide();
+                $("#reqNumero").hide();
+                $("#reqCEP").hide();
+
+                var descricao = $("#descricao").text();
+                var endereco = $("#endereco").text();
+                var numero = $("#numero").text();
+                var cep = $("#cep").text();
+                var aux = 4;
+
+                if (descricao == ""){
+                    aux = aux - 1;
+                    $("#reqDescricao").show();
+                }
+                if (endereco != ""){
+                    aux = aux - 1;
+                    $("#reqEndereco").show();
+                }
+                if (numero != ""){
+                    aux = aux - 1;
+                    $("#reqNumero").show();
+                }
+                if (cep != ""){
+                    aux = aux - 1;
+                    $("#reqCEP").show();
+                }
+
+                if (aux == 4){
+                    $("#btn_cadastrarEstabelecimento").show();
+                }
+            });
+
             $("#teste").click(function(){
   	            $("#cad").hide();
             });
@@ -261,6 +304,13 @@
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
+                                        <div class="form-group" id="reqDescricao">
+                                            <div class="col-lg-1"></div>
+                                            <div class="col-lg-3"></div>
+                                            <div class="col-lg-3">
+                                                <span class="label label-danger">Preenchimento obrigatório!</span>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">Endereço</label>
@@ -269,6 +319,13 @@
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
+                                        <div class="form-group" id="reqEndereco">
+                                                <div class="col-lg-1"></div>
+                                                <div class="col-lg-3"></div>
+                                                <div class="col-lg-3">
+                                                    <span class="label label-danger">Preenchimento obrigatório!</span>
+                                                </div>
+                                            </div>
                                         <div class="form-group">
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">Número</label>
@@ -277,6 +334,13 @@
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
+                                        <div class="form-group" id="reqNumero">
+                                                <div class="col-lg-1"></div>
+                                                <div class="col-lg-3"></div>
+                                                <div class="col-lg-3">
+                                                    <span class="label label-danger">Preenchimento obrigatório!</span>
+                                                </div>
+                                            </div>
                                         <div class="form-group">
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">CEP</label>
@@ -285,10 +349,18 @@
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
+                                        <div class="form-group" id="reqCEP">
+                                                <div class="col-lg-1"></div>
+                                                <div class="col-lg-3"></div>
+                                                <div class="col-lg-3">
+                                                    <span class="label label-danger">Preenchimento obrigatório!</span>
+                                                </div>
+                                            </div>
                                         <div class="form-actions" >
                                             <div class="col-lg-9"></div>
                                             <div class="topnav">
-                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
+                                                    <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-success">
+                                                <input type="button" id="btn_validarEstabelecimento" value="Validar Dados" class="btn btn-primary">
                                                 <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
                                         </div>
