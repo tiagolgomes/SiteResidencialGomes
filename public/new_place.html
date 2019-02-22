@@ -98,10 +98,6 @@
                 }
             });
 
-            $("#teste").click(function(){
-  	            $("#cad").hide();
-            });
-
             var mysql = require('mysql');
 
             var con = mysql.createConnection({
@@ -363,10 +359,6 @@
                                                 <input type="button" id="btn_validarEstabelecimento" value="Validar Dados" class="btn btn-primary">
                                                 <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
-                                        </div>
-                                        <input type="button" id="teste" value="Cadastrar">
-                                        <div id="cad">
-                                            Olá
                                         </div>
                                     </form>
                                 </div>
