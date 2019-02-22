@@ -41,10 +41,114 @@
             rootpath: "/assets/"
         };
     </script>
+    <!--jQuery -->
+    <script src="assets/lib/jquery/jquery.js"></script>
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/jquery/jquery-3.3.1.js"></script>
+    <script src="assets/lib/jquery/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="">
     <!--href="assets/css/style-switcher.css"-->
     <link rel="stylesheet/less" type="text/css" href="assets/less/theme.less">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#btn_validarMorador").hide();
+            $("#reqNome").hide();
+            $("#reqRG").hide();
+            $("#reqCPF").hide();
+            $("#reqTelefone").hide();
+            $("#reqEmail").hide();
+            $("#reqEstadoCivil").hide();
+            $("#reqNacionalidade").hide();
+
+            $('#btn_cadastrarMorador').click(function(){
+                $("#reqNome").hide();
+                $("#reqRG").hide();
+                $("#reqCPF").hide();
+                $("#reqTelefone").hide();
+                $("#reqEmail").hide();
+                $("#reqEstadoCivil").hide();
+                $("#reqNacionalidade").hide();
+
+                var nome = $("#nome").val();
+                var rg = $("#rg").val();
+                var cpf = $("#cpf").val();
+                var telefone = $("#telefone").val();
+                var email = $("#email").val();
+                var estadoCivil = $("#estadoCivil").val();
+                var nacionalidade = $("#nacionalidade").val();
+                var aux = 7;
+
+                if (nome == ""){
+                    aux = aux - 1;
+                    $("#reqNome").show();
+                }
+                if (rg == ""){
+                    aux = aux - 1;
+                    $("#reqRG").show();
+                }
+                if (cpf == ""){
+                    aux = aux - 1;
+                    $("#reqCPF").show();
+                }
+                if (telefone == ""){
+                    aux = aux - 1;
+                    $("#reqTelefone").show();
+                }
+                if (email == ""){
+                    aux = aux - 1;
+                    $("#reqEmail").show();
+                }
+                if (estadoCivil == ""){
+                    aux = aux - 1;
+                    $("#reqEstadoCivil").show();
+                }
+                if (nacionalidade == ""){
+                    aux = aux - 1;
+                    $("#reqNacionalidade").show();
+                }
+
+                if (aux == 4){
+                    $("#btn_validarMorador").trigger('click');
+                }
+            });
+
+            var mysql = require('mysql');
+
+            var con = mysql.createConnection({
+            host: "127.0.0.1",
+            user: "root",
+            password: "tlg18MAR",
+            database: "mydb"
+            });
+
+            
+
+            $("#logout").click(function(){
+                $(this).fadeIn();
+            });
+
+            /*
+
+            $('#btn_cadastrarEstabelecimento').click(function(){
+                $('#teste').hide();
+                
+
+                con.connect(function(err) {
+                    if (err) throw err;
+                    var sql = "INSERT INTO SITE_ALUGUEL_IMOVEL (DESCRICAO, ENDERECO, NUMERO, CEP) VALUES ('Fundo 01', 'Rua Bom Jesus de Iguape', '6078', '81.730-020')";
+                    con.query(sql, function (err, result) {
+                        if (err) throw err;
+                        
+                        
+                    });
+                });
+            });
+
+            */
+        });
+    </script>
 </head>
 
 <body class="  ">
@@ -313,8 +417,8 @@
                                             <div class="col-lg-6"></div>
                                             <div class="topnav">
                                                 <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
-                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_validarEstabelecimento" value="Validar Dados" class="btn btn-success">
-                                                <input type="button" id="btn_cadastrarEstabelecimento" value="Cadastrar Imóvel" class="btn btn-primary">
+                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_validarMorador" value="Validar Dados" class="btn btn-success">
+                                                <input type="button" id="btn_cadastrarMorador" value="Cadastrar Morador" class="btn btn-primary">
                                             </div>
                                         </div>
                                     </form>
@@ -324,14 +428,7 @@
                                 <br>
                                 <br>
                                 <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>                                    
+                                <br>                                  
                             </div>
                         </div>
                     </div>
@@ -347,8 +444,27 @@
         <p>2019 &copy; Residencial Gomes</p>
     </footer>
     <!-- /#footer -->
-    <!--jQuery -->
-    <script src="assets/lib/jquery/jquery.js"></script>
+    <!-- #Success -->
+    <div id="placeSuccessfulRegistration" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Cadastro de Imóveis</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Imóvel Cadastrado com Sucesso!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal -->
+    <!-- /#Success -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.js"></script>
@@ -375,27 +491,6 @@
         });
     </script>
     <script src="assets/js/style-switcher.js"></script>
-
-    <script type="text/javascript">
-        (function($) {
-            $(document).ready(function() {
-                $('.list-inline li > a').click(function() {
-                    var activeForm = $(this).attr('href') + ' > form';
-                    //console.log(activeForm);
-                    $(activeForm).addClass('animated fadeIn');
-                    //set timer to 1 seconds, after that, unload the animate animation
-                    setTimeout(function() {
-                        $(activeForm).removeClass('animated fadeIn');
-                    }, 1000);
-                });
-
-                $('#logout').click(function(){
-                    $(this).fadeIn();
-                });
-            });
-        })(jQuery);
-    </script>
-
 </body>
 
 </html>
