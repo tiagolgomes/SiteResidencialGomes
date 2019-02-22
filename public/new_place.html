@@ -55,6 +55,10 @@
         $(function () {
             //$("#teste").hide();
 
+            $("#teste").click(function(){
+  	            $("#cad").hide();
+            });
+
             var mysql = require('mysql');
 
             var con = mysql.createConnection({
@@ -64,15 +68,7 @@
             database: "mydb"
             });
 
-            $(".list-inline li > a").click(function() {
-                var activeForm = $(this).attr('href') + ' > form';
-                //console.log(activeForm);
-                $(activeForm).addClass('animated fadeIn');
-                //set timer to 1 seconds, after that, unload the animate animation
-                setTimeout(function() {
-                    $(activeForm).removeClass('animated fadeIn');
-                }, 1000);
-            });
+            
 
             $("#logout").click(function(){
                 $(this).fadeIn();
@@ -96,10 +92,6 @@
             });
 
             */
-
-            $("#teste").click(function(){
-  	            $("#cad").hide();
-            });
         });
     </script>
 </head>
