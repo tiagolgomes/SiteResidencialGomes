@@ -55,16 +55,16 @@
         $(function () {
             //$("#teste").hide();
 
-            $("#btn_cadastrarEstabelecimento").hide();
+            $("#btn_validarEstabelecimento").hide();
             
             $("#reqDescricao").hide();
             $("#reqEndereco").hide();
             $("#reqNumero").hide();
             $("#reqCEP").hide();
 
-            $('#btn_validarEstabelecimento').click(function(){
+            $('#btn_cadastrarEstabelecimento').click(function(){
                 
-                $("#btn_cadastrarEstabelecimento").hide();
+                $("#btn_validarEstabelecimento").hide();
                 $("#reqDescricao").hide();
                 $("#reqEndereco").hide();
                 $("#reqNumero").hide();
@@ -94,7 +94,7 @@
                 }
 
                 if (aux == 4){
-                    $("#btn_cadastrarEstabelecimento").show();
+                    $("#btn_validarEstabelecimento").trigger('click');
                 }
             });
 
@@ -356,8 +356,8 @@
                                             <div class="col-lg-8"></div>
                                             <div class="topnav">
                                                 <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
-                                                <input type="button" id="btn_validarEstabelecimento" value="Validar Dados" class="btn btn-primary">
-                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-success">
+                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_validarEstabelecimento" value="Validar Dados" class="btn btn-success">
+                                                <input type="button" id="btn_cadastrarEstabelecimento" value="Cadastrar Imóvel" class="btn btn-primary">
                                             </div>
                                         </div>
                                     </form>
