@@ -51,7 +51,7 @@
 
     <script type="text/javascript">
         $(function () {
-            $("#teste").hide();
+            //$("#teste").hide();
 
             var mysql = require('mysql');
 
@@ -76,8 +76,8 @@
                 $(this).fadeIn();
             });
 
-            $("#btn_cadastrarEstabelecimento").click(function(){
-                $("#teste").show();
+            $('#btn_cadastrarEstabelecimento').click(function(){
+                $('#teste').hide();
                 /*
 
                 con.connect(function(err) {
@@ -284,6 +284,11 @@
                                                 <input type="reset" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
                                         </div>
+                                        <div id="teste">
+                                            <h6>
+                                                teste
+                                            </h6>
+                                        </div>
                                     </form>
                                 </div>
                                 <br>
@@ -315,13 +320,6 @@
         <p>2019 &copy; Residencial Gomes</p>
     </footer>
     <!-- /#footer -->
-
-    <div id="teste">
-        <h6>
-            teste
-        </h6>
-    </div>
-
     <!-- #Success -->
     <div id="placeSuccessfulRegistration" class="modal fade">
         <div class="modal-dialog">
