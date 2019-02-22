@@ -307,24 +307,26 @@
     <!-- /#footer -->
     <!-- #helpModal -->
     <div id="placeSuccessfulRegistration">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Cadastro de Novo Imóvel</h4>
+        <div class="modal fadeIn">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Cadastro de Novo Imóvel</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Imóvel Cadastrado com Sucesso!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>
-                        Imóvel Cadastrado com Sucesso!
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                </div>
+                <!-- /.modal-content -->
             </div>
-            <!-- /.modal-content -->
-        </div>
         <!-- /.modal-dialog -->
+        </div>
     </div>
     <!-- /.modal -->
     <!-- /#helpModal -->
@@ -388,6 +390,7 @@
 
                 $('#cadastrarEstabelecimento').click(function(){
                     $('#placeSuccessfulRegistration').show();
+                    /*
                     con.connect(function(err) {
                         if (err) throw err;
                         var sql = "INSERT INTO SITE_ALUGUEL_IMOVEL (DESCRICAO, ENDERECO, NUMERO, CEP) VALUES ('Fundo 01', 'Rua Bom Jesus de Iguape', '6078', '81.730-020')";
@@ -397,6 +400,7 @@
                             
                         });
                     });
+                    */
                 });
             });
         })(jQuery);
