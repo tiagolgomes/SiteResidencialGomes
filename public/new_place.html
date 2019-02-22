@@ -230,8 +230,8 @@
                                         </div>
                                         <div class="form-actions" >
                                             <div class="topnav">
-                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
-                                                <input type="button" href="#" id="cancelar" value="Cancelar" class="btn btn-default">
+                                                <input type="button" data-toggle="modal" href="#placeSuccessfulRegistration" id="btn_cadastrarEstabelecimento" value="Cadastrar" class="btn btn-primary">
+                                                <input type="button" href="#" id="btn_cancelar" value="Cancelar" class="btn btn-default">
                                             </div>
                                         </div>
                                     </form>
@@ -252,6 +252,12 @@
         <p>2019 &copy; Residencial Gomes</p>
     </footer>
     <!-- /#footer -->
+
+    <div id="teste">
+        <h6>
+            teste
+        </h6>
+    </div>
 
     <!-- #Success -->
     <div id="placeSuccessfulRegistration" class="modal fade">
@@ -306,7 +312,7 @@
     <script>
         $(document).ready(function() {
 
-            $("#placeSuccessfulRegistration").hide();
+            $('#teste').hide();
 
             var mysql = require('mysql');
 
@@ -331,8 +337,7 @@
                 $(this).fadeIn();
             });
 
-            $('#cadastrarEstabelecimento').click(function(){
-                $('#placeSuccessfulRegistration').show();
+            $('#btn_cadastrarEstabelecimento').click(function(){
                 /*
                 con.connect(function(err) {
                     if (err) throw err;
@@ -346,7 +351,7 @@
                 */
             });
 
-            $('#cancelar').click(function(){
+            $('#btn_cancelar').click(function(){
                 $("#descricao").val("");
                 $("#endereco").val("");
                 $("#numero").val("");
