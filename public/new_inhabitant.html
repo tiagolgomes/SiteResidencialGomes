@@ -53,6 +53,12 @@
 
     <script type="text/javascript">
         $(function () {
+
+            for (i = 1; i < 10; i++)
+            { 
+                $('#imoveis').append( '<option value="'+i+'">'+'Quarto '+i+'</option>' );
+            }
+
             $("#btn_validarMorador").hide();
             $("#reqNome").hide();
             $("#reqRG").hide();
@@ -308,11 +314,30 @@
                                 </header>
                                 <div id="collapse3" class="body">
                                     <form action="#" class="form-horizontal" id="inline-validate">
+
+                                        <div class="form-group">
+                                                <div class="col-lg-1"></div>
+                                                <label class="control-label col-lg-3">Selecione o Imóvel</label>
+                                                <div class="col-lg-5">
+                                                    <select id="imoveis" name="imoveis" class="form-control col-lg-6" required>
+                                                        <option value="0"></option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3"></div>
+                                            </div>
+                                            <div class="form-group" id="reqImoveis">
+                                                <div class="col-lg-1"></div>
+                                                <div class="col-lg-3"></div>
+                                                <div class="col-lg-3">
+                                                    <span class="label label-danger">Preenchimento obrigatório!</span>
+                                                </div>
+                                            </div>
+
                                         <div class="form-group">
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">Nome</label>
                                             <div class="col-lg-5">
-                                                <input type="text" id="nome" name="nome" class="form-control col-lg-6">
+                                                <input type="text" id="nome" name="nome" class="form-control col-lg-6" required>
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
@@ -328,7 +353,7 @@
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">Data de Entrada</label>
                                             <div class="col-lg-5">
-                                                <input type="date" id="data" name="data" class="form-control col-lg-6" readonly>
+                                                <input type="date" id="data" name="data" class="form-control col-lg-6" required>
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
@@ -344,7 +369,7 @@
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">RG</label>
                                             <div class="col-lg-5">
-                                                <input type="text" id="rg" name="rg" class="form-control col-lg-6">
+                                                <input type="text" id="rg" name="rg" class="form-control col-lg-6" required>
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
@@ -359,7 +384,7 @@
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">CPF</label>
                                             <div class="col-lg-5">
-                                                <input type="number" data-mask="999.999.999-99" id="cpf" name="cpf" class="form-control col-lg-6">
+                                                <input type="number" id="cpf" name="cpf" class="form-control col-lg-6" maxlength="11" minlength="11" required>
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
@@ -374,7 +399,7 @@
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">Telefone</label>
                                             <div class="col-lg-5">
-                                                <input type="number" data-mask="(099) 99999-9999" id="telefone" name="telefone" class="form-control col-lg-6">
+                                                <input type="number" id="telefone" name="telefone" class="form-control col-lg-6" maxlength="12" minlength="12" required>
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
@@ -389,7 +414,7 @@
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">Email</label>
                                             <div class="col-lg-5">
-                                                <input type="text" id="email" name="email" class="form-control col-lg-6">
+                                                <input type="text" id="email" name="email" class="form-control col-lg-6" required>
                                             </div>
                                             <div class="col-lg-3"></div>
                                         </div>
