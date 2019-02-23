@@ -69,6 +69,7 @@
             $("#reqNacionalidade").hide();
             $("#reqImoveis").hide();
             $("#reqData").hide();
+            $("#reqValorAluguel").hide();
 
             $('#btn_cadastrarMorador').click(function(){
                 $("#reqNome").hide();
@@ -80,6 +81,7 @@
                 $("#reqNacionalidade").hide();
                 $("#reqImoveis").hide();
                 $("#reqData").hide();   
+                $("#reqValorAluguel").hide();
 
                 var nome = $("#nome").val();
                 var rg = $("#rg").val();
@@ -90,6 +92,7 @@
                 var nacionalidade = $("#nacionalidade").val();
                 var imoveis = $("#imoveis :selected").val();
                 var data = $("#data").val();
+                var valorAluguel = $("#valorAluguel").val();
 
                 var aux = 9;
 
@@ -129,8 +132,12 @@
                     aux = aux - 1;
                     $("#reqData").show(); 
                 }
-
-                if (aux == 9){
+                if (valorAluguel == ""){
+                    aux = aux - 1;
+                    $("#reqValorAluguel").show(); 
+                }
+                
+                if (aux == 10){
                     alert($('#imoveis :selected').text());
                     alert($('#imoveis :selected').val());
                     $("#btn_validarMorador").trigger('click');
@@ -368,6 +375,22 @@
 
                                         <div class="form-group">
                                             <div class="col-lg-1"></div>
+                                            <label class="control-label col-lg-3">Valor do Aluguel</label>
+                                            <div class="col-lg-5">
+                                                <input type="number" id="valorAluguel" name="valorAluguel" class="form-control col-lg-6" required>
+                                            </div>
+                                            <div class="col-lg-3"></div>
+                                        </div>
+                                        <div class="form-group" id="reqValorAluguel">
+                                            <div class="col-lg-1"></div>
+                                            <div class="col-lg-3"></div>
+                                            <div class="col-lg-3">
+                                                <span class="label label-danger">Preenchimento obrigatório!</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">Data de Entrada</label>
                                             <div class="col-lg-5">
                                                 <input type="date" id="data" name="data" class="form-control col-lg-6" required>
@@ -375,13 +398,12 @@
                                             <div class="col-lg-3"></div>
                                         </div>
                                         <div class="form-group" id="reqData">
-                                                <div class="col-lg-1"></div>
-                                                <div class="col-lg-3"></div>
-                                                <div class="col-lg-3">
-                                                    <span class="label label-danger">Preenchimento obrigatório!</span>
-                                                </div>
+                                            <div class="col-lg-1"></div>
+                                            <div class="col-lg-3"></div>
+                                            <div class="col-lg-3">
+                                                <span class="label label-danger">Preenchimento obrigatório!</span>
                                             </div>
-
+                                        </div>
                                         <div class="form-group">
                                             <div class="col-lg-1"></div>
                                             <label class="control-label col-lg-3">RG</label>
