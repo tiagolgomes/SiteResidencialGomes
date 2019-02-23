@@ -67,6 +67,8 @@
             $("#reqEmail").hide();
             $("#reqEstadoCivil").hide();
             $("#reqNacionalidade").hide();
+            $("#reqImoveis").hide();
+            $("#reqData").hide();
 
             $('#btn_cadastrarMorador').click(function(){
                 $("#reqNome").hide();
@@ -76,6 +78,8 @@
                 $("#reqEmail").hide();
                 $("#reqEstadoCivil").hide();
                 $("#reqNacionalidade").hide();
+                $("#reqImoveis").hide();
+                $("#reqData").hide();   
 
                 var nome = $("#nome").val();
                 var rg = $("#rg").val();
@@ -84,7 +88,10 @@
                 var email = $("#email").val();
                 var estadoCivil = $("#estadoCivil").val();
                 var nacionalidade = $("#nacionalidade").val();
-                var aux = 7;
+                var imoveis = $("#imoveis").val();
+                var data = $("#data").val();
+
+                var aux = 9;
 
                 if (nome == ""){
                     aux = aux - 1;
@@ -114,8 +121,16 @@
                     aux = aux - 1;
                     $("#reqNacionalidade").show();
                 }
+                if (imoveis == ""){
+                    aux = aux - 1;
+                    $("#reqImoveis").show();
+                }
+                if (data == ""){
+                    aux = aux - 1;
+                    $("#reqData").show(); 
+                }
 
-                if (aux == 7){
+                if (aux == 9){
                     $("#btn_validarMorador").trigger('click');
                 }
             });
